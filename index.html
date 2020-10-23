@@ -1,8 +1,20 @@
 ---
 layout: default
-title: Nisha Devasia
 ---
-<div class="blurb">
-	<h1>Hi there, I'm Nisha Devasia!</h1>
-	<p>This website is under development. Check back soon for updates!<a href="/about">Read more...</a></p>
-</div><!-- /.blurb -->
+
+<div class="home">
+
+  <h1>Posts</h1>
+
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>
