@@ -18,9 +18,17 @@ body {
     color: #333;
 }
 
+figure { 
+    display: inline-block;
+}
+figure figcaption {
+    text-align: center;
+}
+
 .bg-black {
 	background-color: #222;
 }
+
 
 .left-align{
 	text-align: left
