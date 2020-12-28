@@ -24,6 +24,15 @@ figure {
 figure figcaption {
     text-align: center;
 }
+figure img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#bounce {
+	background: url(img/porfolio/ballBounceGif.gif) no-repeat 5px 3px;
+}
 
 .bg-black {
 	background-color: #222;
