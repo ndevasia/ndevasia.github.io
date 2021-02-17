@@ -23,6 +23,7 @@ figure {
 }
 figure figcaption {
     text-align: center;
+    font-size: 14px;
 }
 figure img {
   display: block;
@@ -40,7 +41,8 @@ figure img {
 
 
 .left-align{
-	text-align: left
+	text-align: left;
+	font-size: 16px;
 }
 
 .portfolio-list{
