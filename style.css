@@ -228,6 +228,11 @@ fieldset[disabled] .btn-xl.active {
     background-color: #222;
 }
 
+@font-face {
+  src: url("css/reactor7/Reactor7.woff");
+  font-family: 'Reactor7';
+}
+
 .navbar-default .navbar-brand {
     font-family: "Reactor7","Helvetica Neue",Helvetica,Arial;
     color: #b8cef5;
