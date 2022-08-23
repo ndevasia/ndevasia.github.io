@@ -310,6 +310,21 @@
                 </div>
             </div>
             <div class="row">
+
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal12" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/carepod.PNG" class="img-responsive img-centered" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Open Collectives: CarePod</h4>
+                        <p class="text-muted">Sensory ethnography, writing, storytelling</p>
+                    </div>
+                </div>
             
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="https://github.com/joon-ko/interval" class="portfolio-link" data-toggle="modal">
@@ -400,21 +415,22 @@
                 </div>
             </div>
             <div class="row">
-            
+
                 <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal7" class="portfolio-link" data-toggle="modal">
+                    <a href="#portfolioModal11" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/sword-thumb.png" class="img-responsive img-centered" alt="">
+                        <img src="img/portfolio/streaming.png" class="img-responsive img-centered" alt="">
                     </a>
                     <div class="portfolio-caption">
-                        <h4>Art</h4>
-                        <p class="text-muted">Blender, Animation</p>
+                        <h4>Streaming</h4>
+                        <p class="text-muted">Twitch, Content creation</p>
                     </div>
                 </div>
+            
 
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="#portfolioModal8" class="portfolio-link" data-toggle="modal">
@@ -446,6 +462,20 @@
                     </div>
                 </div>
 
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal7" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/sword-thumb.png" class="img-responsive img-centered" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Art</h4>
+                        <p class="text-muted">Blender, Animation</p>
+                    </div>
+                </div>
                 
             
             </div>
@@ -638,6 +668,60 @@
                            
                             <p>I'm currently wrestling with the complexities of the Twitch video system and doing my best to contribute useful services where I can. Below are some brief summaries of the projects I've worked on, a list that will hopefully continue to grow. <i>Several details are omitted due to non-disclosure agreement.</i></p>
                             </div>
+                            <h3>Porting distributed locking system to AWS DynamoDB</h3>
+                            <ul class="list-inline item-details">
+                                <li><b>Project</b>:
+                                    <a href="https://aws.amazon.com/ivs/">Amazon IVS</a>
+                                    
+                                </li>
+                                <li><b>Timeline</b>:
+                                    March 2022 - ongoing
+                                    
+                                </li>
+                                
+                            </ul>
+
+                            <div class="left-align">
+                                <p>In order to increase the redundancy of a service (details omitted), I had to port its distributed locking system from a third party service to AWS DynamoDB so that multiple entities could view the lock state of other entities around them. This required a deep understanding of how the system's locking actually worked, and writing rigorous tests to ensure that the overhaul was actually correct. To use a good phrase from a mentor of mine, I felt that this project bizarrely validated most traditional computer science undergraduate curricula.</p>
+                            </div>
+                             <h3>Minimal-effort packet disappearance detection</h3>
+                            <ul class="list-inline item-details">
+                                <li><b>Project</b>:
+                                    <a href="https://aws.amazon.com/ivs/">Amazon IVS</a>
+                                    
+                                </li>
+                                <li><b>Timeline</b>:
+                                    August 2021 - August 2022
+                                    
+                                </li>
+                                <li><b>Mentors</b>:
+                                    Rob Mitchelmore
+                                </li>
+                                
+                            </ul>
+
+                            <div class="left-align">
+                                <p>My first project as a junior engineer was to build a service that detects abrupt drops in certain arenas of the video system's traffic. These drops are colloquially referred to as 'black holes', and the service is somewhat cheekily called LIGO. LIGO runs on AWS ECS/Fargate and connects to SQS, Kinesis, and Apache Druid. I architected, coded, and productionized the system entirely on my own, and gained a lot of experience on the journey.</p>
+                            </div>
+                            <h3>Implementing unequal cost multipathing</h3>
+                            <ul class="list-inline item-details">
+                                <li><b>Project</b>:
+                                    <a href="https://aws.amazon.com/ivs/">Amazon IVS</a>
+                                    
+                                </li>
+                                <li><b>Timeline</b>:
+                                    January 2022 - April 2022
+                                    
+                                </li>
+                                <li><b>Mentors</b>:
+                                    Rob Mitchelmore
+                                </li>
+                                
+                            </ul>
+
+                            <div class="left-align">
+                                <p>Unequal cost multipathing, or UCMP, allows more efficient allocation of network traffic across the video system. I updated the previous algorithm (which implemented equal cost multipathing, UCMP's more inefficent predecessor) and worked with a colleague on the networking team to test the code live on the network. This project was yet another step in my journey to understand how exactly the internet works, something that I likely will never understand.</p>
+                            </div>
                             <h3>Data pipelining service for real-time estimated viewership on third party CDNs</h3>
                             <ul class="list-inline item-details">
                                 <li><b>Project</b>:
@@ -656,9 +740,8 @@
 
                             <div class="left-align">
                                 <p>As an intern in the summer of 2020, I was tasked with building a service to track the Twitch video system's usage of third party CDNs which output a graph showing how many users were routed to CDNs per minute. I got my first taste of assembling AWS services into a single working program, and utilized Kinesis, Lambda, and CloudWatch. </p>
-                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                             </div>
-                            
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
                 </div>
@@ -1089,6 +1172,17 @@
                             <p>My best friend and I have a Soundcloud with various covers that we’ve done of our favorite songs. Recording is an arduous process, so there’s not too much on there, but we’re hoping to continue our journey together and write a few of our own sad songs.
                             <br>
                             <iframe width="35%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1168802503&color=%23b8cef5&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/user-266622162" title="Jake &amp; Nisha" target="_blank" style="color: #cccccc; text-decoration: none;">Jake &amp; Nisha</a> · <a href="https://soundcloud.com/user-266622162/sets/covers" title="Covers" target="_blank" style="color: #cccccc; text-decoration: none;">Covers</a></div>
+                            <br><br>
+
+                            <ul>
+                                <li>My first real test of my own recording setup: Akatonbo, a folk song from Japan, where I sang the soprano, alto, and tenor parts and mixed them.
+                                        <br>
+                                        <audio controls>
+                                          <source src="files/akatonbo.mp3" type="audio/mpeg">
+                                        Your browser does not support the audio element.
+                                        </audio>
+                                    </li>
+                            </ul>
                             </p>
                             <h3>Arrangements</h3>
                             <p>I’ve only dabbled in arranging, and what I’ve managed to do so far has been pretty simple. Hopefully I’ll have time to do some cooler stuff in the future.
@@ -1262,6 +1356,111 @@
                                 </figure>
                                 <br><br>
                                 <p>The curriculum will continue to go through iteration cycles until it pilots with schools across the state of Massachusetts in September 2022.</p>
+                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            </div>
+                            
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="portfolio-modal modal fade" id="portfolioModal11" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 col-lg-offset-1">
+                        <div class="modal-body">
+                            <h2>Streaming on Twitch</h2>
+                            <div class="left-align">
+                                <hr class="star-primary">
+
+                            <figure>
+                                <img src="img/portfolio/streaming-2.png" class="img-responsive" alt="colab pre teacher PD">
+                                    <figcaption>Myself, mostly obscured by my microphone, narrating Sephiroth's downfall in the Nibelheim basement.</figcaption>
+                            </figure>
+
+
+                            <br><br>
+                            
+                            <p>After about a year working at Twitch, I decided that it was time to test out the service that I work on! I'm starting with streaming my very favorite game - Final Fantasy VII, if that wasn't obvious from the rest of this site - and I'm hoping to stream more of the classic Final Fantasies, playing guitar, and maybe - just maybe - myself applying to grad school. Reaching Partner status seems like a lofty goal, but I'd like to at least reach Affiliate.</p>
+
+                            <p>Check my channel out at <a href="https://www.twitch.tv/w0lfheart">W0LFHEART on Twitch</a>!</p>
+                                
+                            
+                            <br><br><br>
+                            
+                            </div>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="portfolio-modal modal fade" id="portfolioModal12" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 col-lg-offset-1">
+                        <div class="modal-body">
+                            <h2>Open Collectives: Architecture for an Equitable Digital Economy</h2>
+                            <div class="left-align">
+                            <hr class="star-primary">
+                           
+                            <p>As part of the Civic Media Codesign Studio, I learned theory and practice of codesign, including methods for community participation in iterative stages of project ideation, design, prototyping, testing, launch, and stewardship. I was part of the research team that investigated collectives throughout history, and conducted sensory ethnographic interviews to construct transmedia narratives for community partners. Our work was part of a display at the <a href="https://www.labiennale.org/en/architecture/2021/stations/rafi-segal-sarah-williams">Venice Biennale 2021</a>.</p>
+                            </div>
+                            <ul class="list-inline item-details">
+                                <li><b>Project</b>:
+                                    <a href="http://opencollectives.mit.edu/">Open Collectives</a>
+                                    
+                                </li>
+                                <li><b>Timeline</b>:
+                                    February 2020 - May 2020
+                                    
+                                </li>
+                                <li><b>Team</b>:
+                                    Sarah Rege, Adiel Benitez, Darla Earl
+                                </li>
+                                
+                            </ul>
+                            <div class="left-align">
+                                <p>Open Collectives is ana initiative that seeks to "leverage the power of solidarity in order to strengthen economic sovereignty, housing affordability, communal self-determination, and mutual aid". As part of the class working on the initiative, I worked on the CarePod project (now Carehaus) team to develop stories and visual media for the initiative. The goal of CarePod is to developing intergenerational co-housing where caregivers live alongside and care for older adults and disabled people.</p>
+                                <br>
+
+                                <p>We started our project by conducting an in-depth sensory ethnographic interview with an individual who gave up his career to take care of his grandmother, both out of familial obligation and a lack of other options. From this interview, we were told to construct a story told from the point of view of an object important to the interviewee's experience with their aging relative. We chose to focus on a rocking chair that was a prized possession of the interviewee's grandmother, but unfortunately, as she aged, she no longer was able to stand up if she sat down in it.</p>
+                                
+                                <figure>
+                                    <img src="img/portfolio/carepod-2.PNG" class="img-responsive" alt="">
+                                    <figcaption>I wrote the rocking chair story which this excerpt is from, and a talented teammate (Sarah Rege) created the art for it.</figcaption>
+                                </figure>
+
+                                <p>In addition to the media we created, we conducted research on the aging population in the United States and how we could rethink elder care in times of crisis. The class was being run right at the onset of the COVID-19 pandemic, so finding affordable housing models for both the elderly and their care workers was a particularly salient issue.</p>
+                                <br>
+
+                                <p>Over the course of the semester, our team produced five stories, to which I contributed two. Our research and the visual/written media that we produced were part of a display at the Venice Biennale in 2021.</p>
+
+                                <figure>
+                                    <img src="img/portfolio/carepod-3.PNG" class="img-responsive" alt="">
+                                    <figcaption>The second of the two stories that I wrote, in which two sisters tour a CarePod apartment for their aging mother. </figcaption>
+                                </figure>
+
+                                
                                 <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                             </div>
                             
